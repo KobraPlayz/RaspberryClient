@@ -1,0 +1,63 @@
+================================================================================
+  RASPBERRY CLIENT v1.0.0 - BUILD STATUS
+================================================================================
+
+CURRENT STATUS: Source JAR Available ✓
+
+AVAILABLE IN THIS FOLDER:
+  ✓ Raspberry-Client-1.0.0-sources.jar (35 KB)
+    - Contains all 41 Java source files
+    - Contains all resource files
+    - Ready for import into IDE or manual build
+
+TO GET COMPILED JAR:
+  Run from repository root: ./build-client.sh
+
+  Requirements:
+    - Internet connection (to download ForgeGradle, Minecraft, Forge)
+    - Java 8 (JDK 1.8)
+    - 3GB+ RAM for Gradle build
+
+  Build time:
+    - First build: 10-30 minutes (workspace setup)
+    - Subsequent builds: 30-60 seconds
+
+  Output:
+    - build/libs/Raspberry-Client-1.0.0.jar (2-5 MB)
+    - Will be copied to this release/ folder automatically
+
+WHAT'S IN THE SOURCE JAR:
+  Core:
+    - Main mod class (Raspberry.java)
+    - Configuration manager
+    - Mixin loader
+
+  Modules (9):
+    - FPS Display (color-coded)
+    - CPS Counter (L/R tracking)
+    - Keystrokes (WASD + mouse)
+    - Coordinates (X/Y/Z)
+    - Fullbright
+    - Zoom (hold C)
+    - Toggle Sprint
+    - Toggle Sneak
+    - ClickGUI
+
+  Systems:
+    - Event bus (5 event types)
+    - Settings system (3 setting types)
+    - GUI system (ClickGUI)
+    - 10 Mixin injection points
+    - Utility classes
+
+INSTALLATION AFTER BUILDING:
+  1. Build using ./build-client.sh
+  2. Install Minecraft 1.8.9 + Forge 11.15.1.2318
+  3. Copy JAR to .minecraft/mods/
+  4. Launch and press Right Shift for ClickGUI
+
+================================================================================
+
+Version: 1.0.0
+Date: 2026-01-19
+Target: Minecraft 1.8.9 + Forge 11.15.1.2318
