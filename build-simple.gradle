@@ -1,0 +1,42 @@
+// Simplified build without Mixin for compilation
+apply plugin: 'java'
+
+sourceCompatibility = targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: '/tmp', include: ['forge-universal.jar', 'gson.jar'])
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+jar {
+    from sourceSets.main.output
+    from ('src/main/resources') {
+        include '**/*'
+    }
+
+    manifest {
+        attributes(
+            'FMLCorePlugin': 'com.raspberry.client.mixin.RaspberryMixinLoader',
+            'FMLCorePluginContainsFMLMod': 'true',
+            'ForceLoadAsMod': 'true',
+            'FMLAT': 'raspberry_at.cfg'
+        )
+    }
+
+    archiveBaseName = 'Raspberry-Client-Dev'
+    archiveVersion = '1.0.0'
+}
