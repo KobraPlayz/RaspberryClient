@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "minVersion": "0.7",
+  "package": "com.raspberry.client.mixins",
+  "refmap": "mixins.raspberry.refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinMinecraft",
+    "MixinEntityRenderer",
+    "MixinGuiIngame",
+    "MixinEntityPlayerSP",
+    "MixinRenderManager",
+    "MixinItemRenderer",
+    "MixinEntityLivingBase",
+    "MixinNetworkManager",
+    "MixinRenderGlobal",
+    "MixinWorldClient"
+  ],
+  "client": [],
+  "server": [],
+  "verbose": false
+}
